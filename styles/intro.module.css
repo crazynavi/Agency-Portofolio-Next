@@ -1,0 +1,88 @@
+.container {
+  width: 100%;
+  height: calc(100vh - 50px);
+  display: flex;
+  background: url("https://images.unsplash.com/photo-1474364766806-d1f562d479d3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1049&q=80")
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+}
+.card {
+  flex: 1;
+  padding: 100px;
+  padding-right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: relative;
+}
+.scooterLight {
+  font-size: 60px;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  animation: blur 0.75s ease-out infinite;
+  text-shadow: 0px 0px 5px #fff, 0px 0px 7px #fff;
+}
+@keyframes blur {
+  from {
+    text-shadow: 0px 0px 10px #fff, 0px 0px 10px #fff, 0px 0px 25px #fff,
+      0px 0px 25px #fff, 0px 0px 25px #fff, 0px 0px 25px #fff, 0px 0px 25px #fff,
+      0px 0px 25px #fff, 0px 0px 50px #fff, 0px 0px 50px #fff,
+      0px 0px 50px #7b96b8, 0px 0px 150px #7b96b8, 0px 10px 100px #7b96b8,
+      0px 10px 100px #7b96b8, 0px 10px 100px #7b96b8, 0px 10px 100px #7b96b8,
+      0px -10px 100px #7b96b8, 0px -10px 100px #7b96b8;
+  }
+}
+.title {
+  font-size: 60px;
+  margin: 0;
+}
+.brand {
+  color: #66a6b0;
+}
+.description {
+  font-size: 20px;
+  margin: 0;
+  color: #fff;
+}
+.button {
+  border: none;
+  background-color: #66a6b0;
+  color: black;
+  width: 100px;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+@media screen and (max-width: 480px) {
+  .container {
+    flex-direction: column;
+  }
+  .circle1 {
+    right: -50vh;
+    bottom: -50vh;
+  }
+  .card {
+    padding: 50px;
+    margin-top: 20px;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+  }
+
+  .title {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  .scooterLight {
+    font-size: 30px;
+  }
+  .description{
+    display: none;
+  }
+}
